@@ -26,10 +26,14 @@ ENV PATH=/opt/bitnami/node/bin:/opt/bitnami/python/bin:$PATH \
 
 ## STACKSMITH-END: Modifications below this line will be unchanged when regenerating
 
+COPY rootfs/ /
+
 # Node base template
 COPY . /app
 WORKDIR /app
 
-RUN npm install
+EXPOSE 3000
 
-CMD ["node"]
+RUN npm install -g gulp
+
+ENTRYPOINT ["/app-entrypoint.sh"]
