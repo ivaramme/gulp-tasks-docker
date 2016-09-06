@@ -37,13 +37,17 @@ Simple definition to define all components needed to run a project of this kind.
 
 # Usage:
 
-- The container expects there's `gruntfile.js` in the folder where you'll execute this container.
+- The container expects there's a `gruntfile.js` in the folder where you'll execute this container with the tasks definitions.
 - Inside your project's location, download the docker-compose.yml file from: https://raw.githubusercontent.com/ivaramme/gulp-tasks-docker/master/docker-compose.yml.
 - Execute `docker-compose up` and wait for the container to download (if it is the first time) and until it's execute.
 - Once downloaded, the service should be up and running and will allow you to load the HTML page from the browser connecting to the container on port 3000.
 - If you make changes to the gulpfile.js to import or create new tasks, you'll need to restart the gulp container by using the following ccommand: docker-compose restart myapp
 
 For an example of how this project works, please take a look at the following repository: https://github.com/ivaramme/gulp-tasks-app
+
+# Executing commands
+
+You can invoke specific Gulp tasks in the container. To accomplish that you need to execute: `docker-compose exec myapp gulp <gulp-task>`. This will allow you to run several tasks, including watch tasks that run automatically when there are changes.
 
 # Motivations for this project
 
