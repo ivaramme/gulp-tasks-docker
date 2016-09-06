@@ -1,0 +1,8 @@
+version: '1'
+
+services:
+  myapp:
+    tty: true # Enables debugging capabilities when attached to this container.
+    image: ivaramme/gulp-tasks:latest
+    volumes:
+      - .:/app
