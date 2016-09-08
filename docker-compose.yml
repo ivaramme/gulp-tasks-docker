@@ -2,7 +2,7 @@ version: '2'
 
 services:
   myapp:
-    image: ivaramme/gulp-tasks:0.0.1
+    image: ivaramme/gulp-tasks:0.0.2
     ports:
       - 3000:3000
     volumes:
