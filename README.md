@@ -47,7 +47,7 @@ For an example of how this project works, please take a look at the following re
 
 # Executing commands
 
-You can invoke specific Gulp tasks in the container. To accomplish that you need to execute: `docker-compose exec myapp gulp <gulp-task>`. This will allow you to run several tasks, including watch tasks that run automatically when there are changes.
+You can invoke specific Gulp tasks from the container. To accomplish that you need to execute: `docker-compose run myapp <gulp-task-name>`. This will allow you to run several tasks defined in your gulpfile.
 
 # Motivations for this project
 
